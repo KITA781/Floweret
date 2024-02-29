@@ -1,0 +1,172 @@
+/* Імпорт стилів */
+@import url("common-styles.css");
+
+/* Глобальні стилі */
+flowerShop {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-image: url("https://images.pexels.com/photos/931166/pexels-photo-931166.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Стилі категорій */
+flowerShop > category {
+  display: inline-block;
+  margin: 20px;
+  background-color: #7c0935;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 30px 20px 10px rgba(255, 35, 237, 0.446);
+  width: 320px;
+}
+
+flowerShop > category > name {
+  font-family: fantasy;
+  font-weight: bold;
+  font-size: 30px;
+  color: #eaeff9;
+}
+
+flowerShop > category > importer {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff00dd;
+  margin-bottom: 10px;
+}
+
+/* Стилі для кожного квітка */
+flowerShop > category > flowers > flower {
+  border: 4px solid #d80069;
+  padding: 20px;
+  margin: 15px;
+  background-color: #f6cff6;
+  display: block;
+  width: 250px;
+  border-radius: 20px; /* Увеличиваем радиус закругления */
+}
+
+flowerShop > category > flowers > flower > color {
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #9d0858;
+}
+
+flowerShop > category > flowers > flower > price {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ff0000;
+}
+
+flowerShop > category > flowers > flower > availability {
+  font-family: Arial, sans-serif; /* Використовуємо Arial */
+  font-weight: bold; /* Робимо текст жирним шрифтом */
+  font-size: 15px;
+  color: #0c0101;
+}
+
+/* Псевдо-елементи */
+flowers::before {
+  content: 'FLOWER SHOP 💐';
+  display: block;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 5px;
+  color: #ff69b4;
+}
+
+/* Стилі для аксесуарів */
+flowerShop > accessories {
+  background-color: #dcc1ff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Arial', sans-serif; /* Властивість шрифту */
+  text-align: center;
+  width: 100%;
+  
+}
+flowerShop > accessories > a {
+  display: inline-block;
+  font-weight: bold;
+  color: #021cc9;
+  margin: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-decoration: none; /* Убираем стандартное подчеркивание ссылки */
+}
+flowerShop > accessories > a:hover {
+  background-color: #f0f0f0; /* Изменение цвета при наведении */
+}
+
+/* Стилі для кожного предмета аксесуарів */
+flowerShop > accessories > item {
+  font-weight: bold;
+  color: #021cc9;
+  margin: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Увеличиваем радиус закругления */
+}
+
+flowerShop > accessories > item > price {
+  color: #8a2be2; /* Властивість тексту */
+  font-size: 16px; /* Властивість текстових областей */
+}
+
+flowerShop > accessories > item > availability {
+  font-size: 12px;
+  color: #00008b;
+}
+
+/* Псевдо-елементи */
+accessories::before {
+  content: 'ACCESSORIES'; /* Псевдо-елемент */
+  display: block;
+  font-family: 'Arial', sans-serif; /* Властивість шрифту */
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px;
+  color: #122fcf; /* Властивість тексту */
+}
+
+/* Порядок виводу блоків */
+flowerShop > category:nth-child(-n+3) {
+  order: -1;
+}
+
+flowerShop > category:nth-child(-n+2) {
+  order: 1;
+}
+
+/* Стилі для додаткових матеріалів */
+flowerShop > accessories > .additional-materials {
+  display: inline-block;
+  font-weight: bold;
+  color: #021cc9;
+  margin: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-decoration: none; /* Убираем стандартное подчеркивание ссылки */
+}
+
+flowerShop > accessories > .additional-materials:hover {
+  background-color: #f0f0f0; /* Изменение цвета при наведении */
+}
